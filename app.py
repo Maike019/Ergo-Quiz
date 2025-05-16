@@ -6,7 +6,7 @@ app = Flask(__name__)
  
 # Datenbank initialisieren
 def init_db():
-    conn = sqlite3.connect('/opt/render/project/data/quiz.db')
+    conn = sqlite3.connect('quiz.db')
     c = conn.cursor()
     c.execute('''CREATE TABLE IF NOT EXISTS answers (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -23,7 +23,7 @@ def index():
 @app.route('/submit', methods=['POST'])
 def submit():
     data = request.get_json()
-    conn = sqlite3.connect('/opt/render/project/data/quiz.db')
+    conn = sqlite3.connect('quiz.db')
     c = conn.cursor()
     for item in data:
         c.execute("INSERT INTO answers (question, answer) VALUES (?, ?)", (item['question'], item['answer']))
@@ -33,7 +33,7 @@ def submit():
  
 @app.route('/results')
 def results():
-    conn = sqlite3.connect('/opt/render/project/data/quiz.db')
+    conn = sqlite3.connect('quiz.db')
     c = conn.cursor()
     c.execute("SELECT question, answer FROM answers")
     results = c.fetchall()
