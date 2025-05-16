@@ -1,0 +1,14 @@
+# SQLite-Datenbank ignorieren
+*.db
+
+# Render-Deploy-Datenbankordner (wie in .render.yaml)
+opt/
+!opt/render/project/data/.gitkeep
+
+# Python-Cache und temporäre Dateien
+__pycache__/
+*.pyc
+
+# Sonstige temporäre/Cache-Dateien
+.DS_Store
+.env

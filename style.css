@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #153953;
+}
+
+#quiz-logo {
+    width: 200px; /* Logo größer gemacht */
+    margin-bottom: 20px;
+}
+
+#quiz-container {
+    background: rgba(255, 255, 255, 0.9); /* Fenster leicht transparent */
+    padding: 50px; /* Mehr Padding für ein luftigeres Design */
+    border-radius: 20px; /* Runde Ecken verstärkt */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Stärkere Schatten für Tiefe */
+    text-align: center;
+    width: 400px; /* Fenster breiter gemacht */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Dezenter Rand */
+    backdrop-filter: blur(12px); /* Stärkerer Blur-Effekt */
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#question {
+    font-size: 20px; /* Größerer Text für die Frage */
+    margin-bottom: 20px;
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#start-button,
+#next-button,
+#skip-button {
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+#skip-button {
+    background-color: #FF5733;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#answers button {
+    display: block;
+    margin: 0 auto 15px auto;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 10px; /* Runde Ecken verstärkt */
+    background-color: #f0f0f0; /* Dezentes Grau für den Hintergrund */
+    color: #153953; /* Passende Schriftfarbe */
+    font-size: 18px; /* Größere Schrift für bessere Lesbarkeit */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Weiche Übergänge */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+    pointer-events: auto;
+}
+
+#answers button:hover {
+    background-color: #007BFF; /* Blau beim Hover */
+    color: white; /* Weiße Schrift beim Hover */
+    transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten beim Hover */
+}
+
+#answers button:active {
+    transform: scale(1); /* Zurück zur Originalgröße beim Klicken */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Schatten zurücksetzen */
+}
+
+#name-container {
+    margin-bottom: 30px;
+}
+
+#name-input {
+    padding: 15px; /* Größeres Eingabefeld */
+    width: 90%; /* Breiteres Eingabefeld */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 16px; /* Größere Schrift */
+}
+
+#start-button {
+    padding: 15px 25px; /* Größerer Start-Button */
+    border: none;
+    border-radius: 6px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px; /* Größere Schrift */
+    cursor: pointer;
+}
+
+#skip-button {
+    margin-top: 20px;
+    padding: 15px 25px; /* Größerer Skip-Button */
+    border: none;
+    border-radius: 6px;
+    background-color: #FF5733;
+    color: white;
+    font-size: 16px; /* Größere Schrift */
+    cursor: pointer;
+}
